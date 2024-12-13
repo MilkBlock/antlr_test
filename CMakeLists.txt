@@ -4,11 +4,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_CXX_COMPILER "g++")
 
-file(GLOB_RECURSE LIB_SRC "lib/*.cpp")
+file(GLOB_RECURSE LIB_SRC "lib/*.cpp" )
 file(GLOB_RECURSE GERATED "generated/*.cpp")
 message("${GERATED}")
 
-include_directories(third_party/antlr-runtime generated)
+include_directories(third_party/antlr-runtime generated lib)
 link_directories(third_party/lib)
 
 add_executable(antlr_test main.cpp ${LIB_SRC} ${GERATED} )

@@ -1,3 +1,0 @@
-/home/mineral/antlr_test/build/CMakeFiles/antlr_test.dir
-/home/mineral/antlr_test/build/CMakeFiles/edit_cache.dir
-/home/mineral/antlr_test/build/CMakeFiles/rebuild_cache.dir

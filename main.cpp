@@ -4,11 +4,8 @@
 //#include "passDriver.h"
 #include "ExprTestLexer.h"
 #include "ExprTestParser.h"
-
-#include "antlr4-runtime.h"
-
-#include "MyCVisitor.cpp"
-
+// #include "antlr4-runtime.h"
+#include "MyExprVisitor.h"
 using namespace antlr_test;
 using namespace std;
 using namespace antlr4;
@@ -29,7 +26,7 @@ int main(int argc , char* argv[]) {
     tokens.fill();
     ExprTestParser parser(&tokens);
     ExprTestParser::CalContext *root = parser.cal();
-    ASTVisitor visitor;
+    MyExprVisitor visitor;
     visitor.visitCal(root);
     //auto M = visitor.visit();
     //auto Builder = visitor.getBuilder();
